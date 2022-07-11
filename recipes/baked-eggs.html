@@ -3,51 +3,130 @@
     <head>
         <meta charset="UTF-8" />
         <title>Baked Eggs Recipe</title>
+        <link rel="stylesheet" href="../styles/myreset.css" />
+        <link rel="stylesheet" href="../styles/style.css" />
     </head>
     <body>
-        <h1>Chef John's Baked Eggs</h1>
-        <img
-            src="../img/baked-eggs.jpg"
-            alt="Baked eggs served in an oven dish."
-        />
-        <h2>Description</h2>
-        <p>
-            A quick and simple go-to recipe from Chef John of
-            <a href="https://foodwishes.blogspot.com">foodwishes.com</a>.
-        </p>
-        <h2>Ingredients</h2>
-        <ul>
-            <li>2 large fresh eggs</li>
-            <li>1/3 cup marinara sauce</li>
-            <li>red pepper flakes to taste</li>
-            <li>salt and pepper to taste</li>
-            <li>fresh herbs as desired</li>
-            <li>2 teaspoons olive oil</li>
-            <li>2 tablespoons cream</li>
-            <li>a generous dusting of Parmigiano-Reggiano</li>
-            <li>lots of toast</li>
-        </ul>
-        <h2>Steps</h2>
-        <ol>
-            <li>Preheat oven to 400 degrees F (200 degrees C).</li>
-            <li>
-                Spoon marinara sauce into the bottom of a small baking dish,
-                about 1/4 inch high. Sprinkle with red pepper flakes, salt,
-                black pepper, and herbs. Make a narrow well in the center of the
-                sauce for the eggs.
-            </li>
-            <li>
-                Crack each egg into a ramekin, then pour into the baking dish
-                over the marinara sauce.
-            </li>
-            <li>
-                Sprinkle with Parmigiano-Reggiano cheese, olive oil, and cream.
-                Season with salt and black pepper to taste.
-            </li>
-            <li>
-                Bake in the preheated oven until yolks are just set, 10 to 12
-                minutes. Serve with toast.
-            </li>
-        </ol>
+        <nav class="main-nav recipe">
+            <a class="home-link" href="../index.html" title="Home Page"
+                ><div class="bookmark-wrapper">
+                    <img class="bookmark" src="/img/bookmark.svg" alt="" />
+                </div>
+            </a>
+            <a class="next-page" href="./bulgogi.html" title="Next Recipe">
+                <div class="page-curl"></div>
+            </a>
+        </nav>
+        <main class="container recipe">
+            <article>
+                <header>
+                    <h1 class="recipe">Chef John's Baked Eggs</h1>
+                    <img
+                        class="recipe-img"
+                        src="../img/baked-eggs.jpg"
+                        alt="Baked eggs served in an oven dish."
+                    />
+                </header>
+                <div class="recipe-wrapper">
+                    <section>
+                        <h2>Description</h2>
+                        <p>
+                            A quick and simple go-to recipe from Chef John of
+                            <a href="https://foodwishes.blogspot.com"
+                                >foodwishes.com</a
+                            >.
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Ingredients</h2>
+                        <ul class="recipe">
+                            <li>
+                                2 large fresh
+                                <span class="ingredient">eggs</span>
+                            </li>
+                            <li>
+                                1/3 cup
+                                <span class="ingredient">marinara sauce</span>
+                            </li>
+                            <li>
+                                <span class="ingredient"
+                                    >red pepper flakes</span
+                                >
+                                to taste
+                            </li>
+                            <li>
+                                <span class="ingredient">salt</span> and
+                                <span class="ingredient">pepper</span> to taste
+                            </li>
+                            <li>
+                                fresh <span class="ingredient">herbs</span> as
+                                desired
+                            </li>
+                            <li>
+                                2 teaspoons
+                                <span class="ingredient">olive oil</span>
+                            </li>
+                            <li>
+                                2 tablespoons
+                                <span class="ingredient">cream</span>
+                            </li>
+                            <li>
+                                a generous dusting of
+                                <span class="ingredient"
+                                    >Parmigiano-Reggiano</span
+                                >
+                            </li>
+                            <li>
+                                lots of <span class="ingredient">toast</span>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Steps</h2>
+                        <ol>
+                            <li>
+                                Preheat oven to 400 degrees F (200 degrees C).
+                            </li>
+                            <li>
+                                Spoon
+                                <span class="ingredient">marinara sauce</span>
+                                into the bottom of a small baking dish, about
+                                1/4 inch high. Sprinkle with
+                                <span class="ingredient">red pepper flakes</span
+                                >, <span class="ingredient">salt</span>,
+                                <span class="ingredient">black pepper</span>,
+                                and <span class="ingredient">herbs</span>. Make
+                                a narrow well in the center of the
+                                <span class="ingredient">sauce</span> for the
+                                <span class="ingredient">eggs</span>.
+                            </li>
+                            <li>
+                                Crack each
+                                <span class="ingredient">egg</span> into a
+                                ramekin, then pour into the baking dish over the
+                                <span class="ingredient">marinara sauce</span>.
+                            </li>
+                            <li>
+                                Sprinkle with
+                                <span class="ingredient"
+                                    >Parmigiano-Reggiano</span
+                                >
+                                cheese,
+                                <span class="ingredient"> olive oil </span>, and
+                                <span class="ingredient">cream</span>. Season
+                                with <span class="ingredient">salt</span> and
+                                <span class="ingredient"> black pepper </span>
+                                to taste.
+                            </li>
+                            <li>
+                                Bake in the preheated oven until yolks are just
+                                set, 10 to 12 minutes. Serve with
+                                <span class="ingredient">toast</span>.
+                            </li>
+                        </ol>
+                    </section>
+                </div>
+            </article>
+        </main>
     </body>
 </html>

@@ -1,0 +1,310 @@
+:root {
+    --base-clr: hsl(34, 78%, 91%);
+    --primary-clr: hsl(34, 50%, 20%);
+    --accent-clr-1: hsl(239, 52%, 20%);
+    --accent-clr-2: hsl(0, 100%, 35%);
+}
+
+html {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: var(--accent-clr-1);
+}
+
+body {
+    font-size: 1.3rem;
+    background-image: linear-gradient(
+            to right,
+            hsl(0, 0%, 20%) 0%,
+            hsla(0, 0%, 31%, 0.738) 1.8%,
+            hsla(0, 0%, 31%, 0.541) 4.8%,
+            hsla(0, 0%, 31%, 0.382) 9%,
+            hsla(0, 0%, 31%, 0.278) 15.5%,
+            hsla(0, 0%, 31%, 0.194) 19%,
+            hsla(0, 0%, 31%, 0.126) 34%,
+            hsla(0, 0%, 31%, 0.075) 47%,
+            hsla(0, 0%, 31%, 0.042) 56.5%,
+            hsla(0, 0%, 31%, 0.021) 65%,
+            hsla(0, 0%, 31%, 0.008) 73%,
+            hsla(0, 0%, 31%, 0.002) 80.2%,
+            hsla(0, 0%, 31%, 0) 100%
+        ),
+        linear-gradient(
+            100deg,
+            hsl(0, 0%, 20%),
+            5%,
+            hsl(0, 0%, 0%, 0%) 20%,
+            hsl(0, 0%, 0%, 0%) 25%,
+            hsl(0, 0%, 0%, 0%) 30%
+        ),
+        linear-gradient(
+            80deg,
+            hsl(0, 0%, 20%),
+            5%,
+            hsl(0, 0%, 0%, 0%) 20%,
+            hsl(0, 0%, 0%, 0%) 25%,
+            hsl(0, 0%, 0%, 0%) 30%
+        ),
+        url(../img/paper_2.webp);
+    background-repeat: repeat;
+    background-color: var(--base-clr);
+    background-blend-mode: luminosity;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--primary-clr);
+}
+
+h2,
+h3 {
+    margin-bottom: 0.5rem;
+}
+
+h2 + *,
+h2 ~ h3 {
+    margin-left: 1.25rem;
+}
+
+h3 + * {
+    margin-left: 2.5rem;
+}
+
+h1 {
+    font-size: 6rem;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+header {
+    margin-bottom: 10rem;
+}
+
+header > p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+section {
+    max-width: 80ch;
+    margin-bottom: 5rem;
+}
+
+h1,
+.index-nav {
+    text-align: center;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2.4rem;
+    will-change: transform, opacity;
+    min-height: 155px;
+    overflow: hidden;
+}
+
+.main-nav.index {
+    margin-bottom: 0;
+}
+
+.home-link {
+    display: inherit;
+    width: 4rem;
+    margin-left: 5rem;
+    height: max-content;
+}
+
+.bookmark-wrapper {
+    position: relative;
+    height: max-content;
+}
+
+.bookmark-wrapper::before {
+    content: "Home";
+    font-size: 1.5rem;
+    color: var(--accent-clr-1);
+    position: absolute;
+    top: 110px;
+    transition: opacity 0.1s;
+    pointer-events: none;
+}
+
+.bookmark-wrapper:hover::before {
+    opacity: 0;
+}
+
+.bookmark-wrapper::after {
+    content: "";
+    background-image: url(../img/home.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 4rem;
+    height: 100%;
+    position: absolute;
+    top: 90px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+
+.bookmark-wrapper:hover::after {
+    opacity: 1;
+}
+
+.bookmark {
+    width: 4rem;
+    margin-top: -20px;
+    transition: transform 0.25s ease;
+}
+
+.bookmark:hover {
+    transform: translateY(20px);
+}
+
+.page-curl {
+    width: 115px;
+    height: 130px;
+    background: linear-gradient(
+        228deg,
+        transparent,
+        hsla(0, 0%, 0%, 15%) 46%,
+        hsla(0, 0%, 0%, 70%) 50%,
+        hsla(0, 0%, 0%, 50%) 50%,
+        hsla(0, 0%, 73%, 40%) 56%,
+        hsla(0, 0%, 80%, 20%) 62%,
+        hsla(0, 0%, 93%, 10%) 75%,
+        hsla(0, 0%, 0%, 10%) 100%
+    );
+    box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 15px 100px;
+    transition: border-radius 0.1s ease-in-out, transform 0.3s ease,
+        box-shadow 0.3s ease-out;
+    position: absolute;
+    right: 0;
+    /* hides box-shadow on top and right of div */
+    clip-path: inset(0px 0px -11px -12px);
+}
+
+.page-curl:hover {
+    border-bottom-left-radius: 5px 90px;
+    transform: scale(1.05) skewX(4deg) skewY(3deg) translate(-6px, 6px);
+    box-shadow: -1px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    min-width: fit-content;
+    margin-inline: 6rem;
+    padding-bottom: 3rem;
+}
+
+.recipe-img {
+    border-radius: 10px;
+    mix-blend-mode: multiply;
+    filter: brightness(130%) saturate(100%);
+    height: auto;
+    width: 540px;
+    margin-inline: auto;
+}
+
+.recipe-wrapper {
+    margin-left: 3em;
+    margin-right: 2em;
+    max-width: 75ch;
+}
+
+.ingredient {
+    font-weight: bold;
+}
+
+.index-nav a {
+    text-decoration: none;
+}
+
+header.index {
+    margin-bottom: 5rem;
+}
+
+h1.index {
+    margin-bottom: 1.5rem;
+}
+
+h1.recipe {
+    margin-bottom: 4rem;
+    margin-inline: 3rem;
+}
+
+.index-nav li {
+    margin-bottom: 0.25em;
+    font-weight: bold;
+}
+
+ol li,
+ul li.recipe {
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+@media (min-width: 850px) {
+    body {
+        background-image: linear-gradient(
+                to right,
+                hsl(0, 0%, 20%) 0%,
+                hsla(0, 0%, 31%, 0.738) 1.8%,
+                hsla(0, 0%, 31%, 0.541) 4.8%,
+                hsla(0, 0%, 31%, 0.382) 9%,
+                hsla(0, 0%, 31%, 0.278) 15.5%,
+                hsla(0, 0%, 31%, 0.194) 19%,
+                hsla(0, 0%, 31%, 0.126) 34%,
+                hsla(0, 0%, 31%, 0.075) 47%,
+                hsla(0, 0%, 31%, 0.042) 56.5%,
+                hsla(0, 0%, 31%, 0.021) 65%,
+                hsla(0, 0%, 31%, 0.008) 73%,
+                hsla(0, 0%, 31%, 0.002) 80.2%,
+                hsla(0, 0%, 31%, 0) 100%
+            ),
+            linear-gradient(
+                100deg,
+                hsl(0, 0%, 20%),
+                3%,
+                hsl(0, 0%, 20%, 10%) 8%,
+                hsl(0, 0%, 20%, 9%) 11.5%,
+                hsl(0, 0%, 20%, 8%) 15.5%,
+                hsl(0, 0%, 20%, 7%) 20%,
+                hsl(0, 0%, 20%, 6%) 35%,
+                hsl(0, 0%, 20%, 5%) 40%,
+                hsl(0, 0%, 20%, 4%) 50%
+            ),
+            linear-gradient(
+                80deg,
+                hsl(0, 0%, 20%),
+                3%,
+                hsl(0, 0%, 20%, 10%) 8%,
+                hsl(0, 0%, 20%, 9%) 11.5%,
+                hsl(0, 0%, 20%, 8%) 15.5%,
+                hsl(0, 0%, 20%, 7%) 20%,
+                hsl(0, 0%, 20%, 6%) 35%,
+                hsl(0, 0%, 20%, 5%) 40%,
+                hsl(0, 0%, 20%, 4%) 45%
+            ),
+            url(../img/paper_2.webp);
+        background-repeat: repeat;
+        background-color: var(--base-clr);
+        background-blend-mode: luminosity;
+    }
+}
+
+@media (min-width: 900px) {
+    header.index {
+        margin-bottom: 8rem;
+    }
+}
